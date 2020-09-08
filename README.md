@@ -3,6 +3,9 @@
 ![Estrellas](https://img.shields.io/github/stars/pandao/carlos-el-botsito.svg)
 Este es un Bot de Twitch Open Source basado en la utilidad TwitchIO de Python, esta hecha para el canal de Twitch de [@FreddyFalso](https://twitch.tv/freddyfalso).
 
+! [Logo] 
+(https://i.pinimg.com/originals/f0/48/9c/f0489ceb101a4bb4f8fd6f6f2c9e2762.jpg)
+
 ## Guía de configuración.
 
 ### Hacer cuenta del Bot.
@@ -26,6 +29,8 @@ Este es un Bot de Twitch Open Source basado en la utilidad TwitchIO de Python, e
 4. [] ejecute el comando `pipenv --python3.8`.
 
 5. [] Ejecute el comando `pipenv install twitchio`.
+
+    - A este punto se tuvieron que crear unos archivos llamados `Pipfile` y `Pipfile.lock`.
 
 6. [] Crea un archivo ".env" (Solo la extension) copia el siguiente código metelo dentro y rellenalo con la información que obtuvimos antes.
 
