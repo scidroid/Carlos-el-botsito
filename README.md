@@ -36,7 +36,7 @@ pipenv install twitchio
 ```
 6. Crea un archivo ".env" (Solo la extension) copia el siguiente código metelo dentro y rellenalo con la información que obtuvimos antes.
 
-```
+```python
 # .env
 TMI_TOKEN=oauth:
 CLIENT_ID=
