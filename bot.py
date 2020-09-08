@@ -18,15 +18,9 @@ async def event_ready():
     ws = bot._ws  # this is only needed to send messages within event_ready
     await ws.send_privmsg(os.environ['CHANNEL'], f"/me llego al chat!")
 
-Frases = ['Te quiero mucho', 'La teoria de la gravedad de Einstein', 'Yo no soy senior, ni mid, ni junior yo soy ingeniero', '¿Todo bien en casa?', 'Mis mods son simps', 'Coño *Inserte persona del chat*']
-
-@bot.command(name="frase")
-async def Frase(ctx):
-    await ctx.channel.send(random.choice(Frases) + '-Freddy 2020')
 
 @bot.event
 async def event_message(ctx):
-    'Runs every time a message is sent in chat.'
     if ctx.author.name.lower() == os.environ['BOT_NICK'].lower() or ctx.author.name.lower() == 'Nightbot'.lower():
         return
 
@@ -53,9 +47,17 @@ async def event_message(ctx):
 
     while true == 'yes':
         await ctx.channel.send("Hey, ya sigues a Freddy en todas sus redes? no, no lo hiciste, pues te llevas un puño en tu boca")
-        time.sleep(1800)
+        time.sleep(1800) 
 
+Frases = ['Te quiero mucho', 'La teoria de la gravedad de Einstein', 'Yo no soy senior, ni mid, ni junior yo soy ingeniero', '¿Todo bien en casa?', 'Mis mods son simps', 'Coño *Inserte persona del chat*']
 
+@bot.command(name="frase")
+async def Frase(ctx):
+    await ctx.channel.send(random.choice(Frases) + ' -Freddy 2020.')
+
+@bot.command(name='Source')
+async def Source(ctx):
+    await ctx.channel.send('Mira como funciono por dentro, https://github.com/scidroid/carlos-el-botsito')
 
 if __name__ == "__main__":
     bot.run()
