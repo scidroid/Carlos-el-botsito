@@ -18,6 +18,15 @@ async def event_ready():
     ws = bot._ws  # this is only needed to send messages within event_ready
     await ws.send_privmsg(os.environ['CHANNEL'], f"/me llego al chat!")
 
+uno = 0
+
+dos = 0
+
+tres = 0
+
+cuatro = 0
+
+cinco = 0
 
 @bot.event
 async def event_message(ctx):
@@ -43,11 +52,20 @@ async def event_message(ctx):
     if '?' in ctx.content.lower() and 'youtube.com' not in ctx.content.lower():
         await ctx.channel.send("Contrata a mario")
 
-    true = 'yes'
+    if ctx.content.lower() == "1":
+        uno += 1
 
-    while true == 'yes':
-        await ctx.channel.send("Hey, ya sigues a Freddy en todas sus redes? no, no lo hiciste, pues te llevas un puño en tu boca")
-        time.sleep(1800) 
+    if ctx.content.lower() == "2":
+        dos += 1
+
+    if ctx.content.lower() == "3":
+        tres += 1
+
+    if ctx.content.lower() == "4":
+        cuatro += 1
+
+    if ctx.content.lower() == "5":
+        cinco += 1
 
 
 @bot.command(name="frase")
@@ -57,38 +75,6 @@ async def Frase(ctx):
 @bot.command(name='Source')
 async def Source(ctx):
     await ctx.channel.send('Mira como funciono por dentro, https://github.com/scidroid/carlos-el-botsito')
-    
-uno= 0
-
-dos= 0
-
-tres= 0
-
-cuatro= 0
-
-cinco= 0
-
-@bot.event
-async def event_message(ctx):
-    if ctx.author.name.lower() == os.environ['BOT_NICK'].lower() or ctx.author.name.lower() == 'Nightbot'.lower():
-        return
-
-    await bot.handle_commands(ctx)
-
-    if ctx.content.lower() == 1:
-        uno =+ 1
-
-    if ctx.content.lower() == 2:
-        dos =+ 1
-
-    if ctx.content.lower() == 3:
-        tres =+ 1
-
-    if ctx.content.lower() == 4:
-        cuatro =+ 1
-
-    if ctx.content.lower() == 5:
-        cinco =+ 1
 
 
 @bot.command(name="resultados")
