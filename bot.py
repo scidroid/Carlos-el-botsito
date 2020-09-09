@@ -30,6 +30,7 @@ async def event_ready():
 
 @bot.event
 async def event_message(ctx):
+    global uno,dos,tres,cuatro,cinco
     if ctx.author.name.lower() == os.environ['BOT_NICK'].lower() or ctx.author.name.lower() == 'Nightbot'.lower():
         return
 
