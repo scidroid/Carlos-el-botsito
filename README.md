@@ -17,6 +17,8 @@ Este es un Bot de Twitch Open Source basado en la utilidad TwitchIO de Python, e
 
 ### Poniendo el bot en marcha.
 
+- Elimine los archivos pipfile y pipfile.lock (son de demostración).
+
 -  Instala Python en tu PC.
 
 - instala PipEnv con el comando de consola `pip install pipenv`. 

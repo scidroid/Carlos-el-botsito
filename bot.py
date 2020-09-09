@@ -3,6 +3,16 @@ from twitchio.ext import commands
 import random
 import time
 
+uno = 0
+
+dos = 0
+
+tres = 0
+
+cuatro = 0
+
+cinco = 0
+
 bot = commands.Bot(
     irc_token=os.environ['TMI_TOKEN'],
     client_id=os.environ['CLIENT_ID'],
@@ -17,16 +27,6 @@ async def event_ready():
     print(f"{os.environ['BOT_NICK']} llego al chat!")
     ws = bot._ws  # this is only needed to send messages within event_ready
     await ws.send_privmsg(os.environ['CHANNEL'], f"/me llego al chat!")
-
-uno = 0
-
-dos = 0
-
-tres = 0
-
-cuatro = 0
-
-cinco = 0
 
 @bot.event
 async def event_message(ctx):
