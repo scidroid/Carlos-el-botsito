@@ -75,22 +75,20 @@ async def event_message(ctx):
 
     await bot.handle_commands(ctx)
 
-    # await ctx.channel.send(ctx.content)
-
     if ctx.content.lower() == 1:
-        uno += 1
+        uno =+ 1
 
     if ctx.content.lower() == 2:
-        dos += 1
+        dos =+ 1
 
     if ctx.content.lower() == 3:
-        tres += 1
+        tres =+ 1
 
     if ctx.content.lower() == 4:
-        cuatro += 1
+        cuatro =+ 1
 
     if ctx.content.lower() == 5:
-        cinco += 1
+        cinco =+ 1
 
 
 @bot.command(name="resultados")
